@@ -19,7 +19,7 @@ const tokenCache = new LRUCache<string, DecodedIdToken>({
 });
 
 const TOKEN_CACHE_BUFFER = 1000 * 60 * 15; // 15 minutes instead of 5
-
+// verify the Id Token
 export async function verifyIdToken(
   idToken: string,
   noCache = false
