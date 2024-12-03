@@ -18,7 +18,7 @@ const tokenCache = new LRUCache<string, DecodedIdToken>({
     JSON.stringify(token).length + key.length, //sizeInBytes
 });
 
-const TOKEN_CACHE_BUFFER = 1000 * 60 * 15; // 15 minutes instead of 5 for long last signup
+const TOKEN_CACHE_BUFFER = 1000 * 60 * 15; // 15 minutes instead of 5
 
 export async function verifyIdToken(
   idToken: string,
